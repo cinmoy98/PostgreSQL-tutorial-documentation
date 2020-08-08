@@ -26,3 +26,4 @@ Run the installer file.Installation process is like any other software but make 
 
 After you finish you can run either `SQL Shell (psql)` for command line client or `pgAdmin 4` for GUI client.You are now ready to go.
 
+🅷🅴🅻🅻🅾
