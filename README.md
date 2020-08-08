@@ -17,4 +17,6 @@ This paragraph has `variable` inside
 	</head>
 </html>
 ```
-![alt text](http://picsum.phtos/200/200)
+![alt text](images/budda.jpg)
+
+> blockquote
