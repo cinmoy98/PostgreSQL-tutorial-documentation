@@ -1,10 +1,4 @@
-__________                __                          ________________   ___     
-\______   \ ____   ______/  |_   ____ _______  ____  /   _____/_____  \ |   |    
- |     ___// __ \ /  ___/   __\ / ___\\_  __ \/ __ \ \_____  \ /  / \  \|   |    
- |    |   (  \_\ )\___ \ |  |  / /_/  \|  | \/  ___/_/        \   \_/   \   |___ 
- |____|    \____//____  \|__|  \___  / |__|   \___  /_______  /_____\ \_/______ \
-                      \/      /_____/             \/        \/       \__\      \/
-
+🅿🅾🆂🆃🅶🆁🅴🆂🆀🅻
 
 # PostgreSQL-tutorial-documentation
 A complete walk through guide to master on PostgreSQL
@@ -14,6 +8,10 @@ A complete walk through guide to master on PostgreSQL
 This Documentation includes:
 - [Introduction](#introduction)
 - [Installation](#installation)
+- [Getting Started](#your-first-step)
+ - [Creating Database](#creating-database)
+ - [Creating Table](#creating-table)
+ - [Insert into](#insert-into)
 
 > I used Windows 10 (64-bit) operating system to run all the codes and procedures.
 
@@ -48,4 +46,8 @@ I will use mostly terminal/cmd for my future works as it is a good habit and hel
 Run the SQL Shell (psql).As you are running it for the first time your default server[localhost], Database [postgres], port [5432], Username [postgres].So you need to press just `enter`.Password is the superuser password that you set during installation.
 
 ## Creating database
+
+## Creating Table
+
+## Insert Into
 
