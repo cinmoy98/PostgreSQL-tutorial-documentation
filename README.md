@@ -45,9 +45,9 @@ I will use mostly terminal/cmd for my future works as it is a good habit and hel
 
 
 Run the SQL Shell (psql).As you are running it for the first time your default server[localhost], Database [postgres], port [5432], Username [postgres].So you need to press just `enter`.Password is the superuser password that you set during installation.
-<p align="center">
+<!-- <p align="center">
 	<img src="https://i.ibb.co/L5KPXvs/getting-started.png" alt="getting-started" border="0">
-</p>
+</p> -->
 
 For windows you can operate from `command prompt` also.You have to add the `PostgreSQL` bin directory in the system path (add in path under environment variables).
 Open command prompt.Run-
@@ -76,6 +76,56 @@ You can connect a database in a various way.
 
 ## Creating Table
 
+To create a new table, you use the `CREATE TABLE` statement.
+The following statement creates the `accounts` table:
+```SQL
+
+CREATE TABLE accounts (
+	user_id serial PRIMARY KEY,
+	username VARCHAR ( 50 ) UNIQUE NOT NULL,
+	password VARCHAR ( 50 ) NOT NULL,
+	email VARCHAR ( 255 ) UNIQUE NOT NULL,
+	created_on TIMESTAMP NOT NULL,
+    last_login TIMESTAMP 
+);
+
+```
+
+**In this syntax:**
+
+- Creating a table that already exists will result in a error. The IF NOT EXISTS option allows you to create the new table only if it does not exist. When you use the IF NOT EXISTS option and the table already exists, PostgreSQL issues a notice instead of the error and skips creating the new table.
+
+- Specify a comma-separated list of table columns. Each column consists of the column name, the kind of data that column stores, the length of data, and the column constraint. The column constraints specify rules that data stored in the column must follow. For example, the not-null constraint enforces the values in the column cannot be NULL. The column constraints include not null, unique, primary key, check, foreign key constraints.
+
+- Finally, specify the table constraints including primary key, foreign key, and check constraints.
+
+> Note that some table constraints can be defined as column constraints like primary key, foreign key, check, unique constraints.Check them [here](https://www.postgresql.org/docs/9.4/ddl-constraints.html)
+
+You can write this command in a line,like this:
+
+<p align="center">
+	<img src="https://i.ibb.co/f8Gb2c1/create-table1.png" alt="create-table1" border="0">
+</p>
+
+Or you can every colums seperately by pressing `enter` until a `;` is pressed:
+
+<p align="center">
+	<img src="https://i.ibb.co/0cdP604/create-table2.png" alt="create-table2" border="0">
+</p>
+
+Then to describe all the tables simply run `\d`
+
+<p align="center">
+	<img src="https://i.ibb.co/qWVnsFt/create-table3.png" alt="create-table3" border="0">
+</p>
+
+You can describe a table by `\d table_name`
+
+<p align="center">
+	<img src="https://i.ibb.co/pPQ2Xrf/create-table4.png" alt="create-table4" border="0">
+</p>
 
 ## Insert Into
+
+
 
