@@ -46,9 +46,9 @@ I will use mostly terminal/cmd for my future works as it is a good habit and hel
 
 Run the SQL Shell (psql).As you are running it for the first time your default server[localhost], Database [postgres], port [5432], Username [postgres].So you need to press just `enter`.Password is the superuser password that you set during installation.
 
-<!-- <p align="center">
+<p align="center">
 	<img src="https://i.ibb.co/L5KPXvs/getting-started.png" alt="getting-started" border="0">
-</p> -->
+</p>
 
 For windows you can operate from `command prompt` also.You have to add the `PostgreSQL` bin directory in the system path (add in path under environment variables).
 Open command prompt.Run-
@@ -105,28 +105,28 @@ CREATE TABLE person (
 
 You can write this command in a line,like this:
 
-<!-- <p align="center">
+<p align="center">
 	<img src="https://i.ibb.co/f8Gb2c1/create-table1.png" alt="create-table1" border="0">
-</p> -->
+</p>
 
 Or you can every colums seperately by pressing `enter` until a `;` is pressed:
 
-<!-- <p align="center">
+<p align="center">
 	<img src="https://i.ibb.co/0cdP604/create-table2.png" alt="create-table2" border="0">
-</p> -->
+</p>
 
 Then to describe all the tables simply run `\d`
-<!-- 
+
 <p align="center">
 	<img src="https://i.ibb.co/qWVnsFt/create-table3.png" alt="create-table3" border="0">
-</p> -->
+</p>
 
 You can describe a table by `\d table_name`
 
-<!-- <p align="center">
+<p align="center">
 	<img src="https://i.ibb.co/pPQ2Xrf/create-table4.png" alt="create-table4" border="0">
 </p>
- -->
+
 ## Insert Into
 
 Insert into is so simple.Just specify the columns name you want to insert into and write the values accordingly.
@@ -154,10 +154,84 @@ VALUES('Cinmoy Das', 'Shuvro', 'Male', '1890/01/08');
 
 ```
 
-<!-- <p align="center">
+ <p align="center">
 	<img src="https://i.ibb.co/qdwztQS/insert.png" alt="insert" border="0">
 </p>
--->
+
 
 > 🔞 Adults always uses constraints.
+
+
+## SELECT
+
+Its simple for now but will be complex as we move on.
+
+The basic command :
+
+```SQL
+
+SELECT column_1, column_2, ..... ,column_n FROM table_name;
+
+```
+If you want to select all columns from the table then-
+
+```SQL
+
+SELECT * FROM table_name;
+
+```
+
+ <p align="center">
+	<img src="https://i.ibb.co/k3YzThB/selct.png" alt="selct" border="0">
+</p>
+
+
+
+## ORDER BY
+- ASC (Ascending order(default))
+- DESC (Descending order)
+
+Basic format :
+
+```SQL
+
+SELECT column_1, column_2, ..., column_n FROM table_name ORDER BY
+column_priority_1, column_priority_2, ... ,column_priority_n ASC/DESC; 
+
+```
+Example :
+
+```SQL
+
+SELECT * FROM person ORDER BY country_of_birth;
+
+```
+ <p align="center">
+	<img src="https://i.ibb.co/0X5DSX3/order-asc.png" alt="order-asc" border="0">
+</p>
+
+
+```SQL
+
+SELECT * FROM person ORDER BY country_of_birth DESC;
+
+```
+ <p align="center">
+	<img src="https://i.ibb.co/m67nHS6/order-desc.png" alt="order-desc" border="0">
+</p>
+
+
+## DISTINCT
+
+It fetches the unique values from a column.
+
+
+```SQL
+
+SELECT DISTINCT country_of_birth FROM person ORDER BY country_of_birth;
+
+```
+ <p align="center">
+	<img src="https://i.ibb.co/BC3V9Yc/distinct.png" alt="distinct" border="0">
+</p>
 
