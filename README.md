@@ -72,7 +72,7 @@ You can connect a database in a various way.
  - You can simply use this command to connect a database `cinmoy` if user remains same : `\c cinmoy`
 - **Case 2**
  - If credentials are different then: `\c DBNAME USER HOST PORT`
-- ** Case 3**
+- **Case 3**
  - Or you can just connect from windows cmd : `psql DBNAME USER`
 
 ## Creating Table
