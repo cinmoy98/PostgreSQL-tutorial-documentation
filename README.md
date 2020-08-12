@@ -235,3 +235,38 @@ SELECT DISTINCT country_of_birth FROM person ORDER BY country_of_birth;
 	<img src="https://i.ibb.co/BC3V9Yc/distinct.png" alt="distinct" border="0">
 </p>
 
+
+
+## WHERE, AND, OR
+
+Ok its time move on to the real world.Because in the projects what you will need is to fetch query under certain condition.I will give you the basic example but things will get complex when you will get your hands dirty.
+
+So, `WHERE` is used before certain conditions.Basic structure is-
+
+```SQL
+
+SELECT * FROM table_name WHERE conditions ;
+
+```
+
+So,lets take a example
+
+```SQL
+
+SELECT * FROM person WHERE country_of_birth = 'China';
+
+```
+
+It's time for some logic works. Yah you can use `AND` `OR` logics here too and why not?
+
+> I am showing a relatively complex query.Hope you will understand it if you are familiar with basic programming
+
+```SQL
+
+SELECT * FROM person WHERE gender = 'Male' AND (country_of_birth = 'China' OR country_of_birth = 'Poland')
+
+```
+<p align="center">
+	<img src="https://i.ibb.co/PT5vQs1/where.png" alt="where" border="0">
+</p>
+
