@@ -263,10 +263,86 @@ It's time for some logic works. Yah you can use `AND` `OR` logics here too and w
 
 ```SQL
 
-SELECT * FROM person WHERE gender = 'Male' AND (country_of_birth = 'China' OR country_of_birth = 'Poland')
+SELECT * FROM person WHERE gender = 'Male' AND (country_of_birth = 'China' OR country_of_birth = 'Brazil');
 
 ```
 <p align="center">
 	<img src="https://i.ibb.co/PT5vQs1/where.png" alt="where" border="0">
 </p>
 
+
+## IN
+
+So,first let me give a case - 
+
+```SQL
+
+SELECT * FROM person WHERE country_of_birth = 'China' OR country_of_birth = 'Poland' OR country_of_birth = 'Brazil' ; 
+
+```
+
+Look we have to write thrice the column name `country_of_birth` .What can we do ? 😫
+
+You got it we can simply use `IN`
+
+```SQL
+
+SELECT * FROM person WHERE country_of_birth IN ('China', 'Poland', 'Brazil');
+
+```
+
+Pretty Simple, hah ? 😃
+Don't woory it will be more easy soon ....
+
+## BETWEEN , NOT BETWEEN
+ 
+`BETWEEN` fetches data in a range.It can be applied on several data types.It's easy.Look at some examples :
+
+```SQL
+
+SELECT * FROM person WHERE date_of_birth BETWEEN DATE '1990-01-01' AND '1995-12-31' order by date_of_birth;
+
+```
+```SQL
+SELECT * FROM person WHERE id BETWEEN 150 AND 200;
+```
+
+If you want to check if a value is out of a range, you combine the NOT operator with the `BETWEEN` operator as follows:
+
+```SQL
+SELECT * FROM person WHERE id NOT BETWEEN 150 AND 200;
+```
+
+> You often use the `BETWEEN` operator in the `WHERE` clause of a `SELECT`, `INSERT`, `UPDATE` or `DELETE` statement.
+
+## LIKE
+
+Sometimes we may require tuples from the database which match certain patterns. For example, we may wish to retrieve all columns where the tuples start with the letter ‘y’, or start with ‘b’ and end with ‘l’, or even more complicated and restrictive string patterns. This is where the LIKE Clause comes to rescue.
+
+There are two kinds of wildcards used to filter out the results:
+
+- % : Used to match zero or more characters. (Variable Length)
+- _ : Used to match exactly one character. (Fixed Length)
+
+The following are the rules for pattern matching with the LIKE Clause:
+
+<p align="center">
+	<img src="https://i.ibb.co/ydyyVMJ/like.png" alt="like" border="0">
+</p>
+
+Some examples:
+
+```SQL
+SELECT * FROM person WHERE email LIKE '%@reuters.com';
+```
+<p align="center">
+	<img src="https://i.ibb.co/XLnW3QF/like2.png" alt="like2" border="0">
+</p>
+
+For case - insensetiveness you can use `ILIKE` clause.
+
+Now try it out o your own .
+
+## GROUP BY
+
+The `GROUP BY` clause divides the rows returned from the `SELECT` statement into groups. For each group, you can apply an aggregate function e.g.,  `SUM()` to calculate the sum of items or `COUNT()` to get the number of items in the groups.
